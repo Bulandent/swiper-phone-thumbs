@@ -71,10 +71,10 @@
         bottom: 50px;
       }
       .swiper-container-outside .swiper-slide:not(.swiper-slide-active) {
-        transform: translateX(-1.0416666667vw);
+        transform: translateX(-30px);
       }
       .swiper-container-outside .swiper-slide-active ~ .swiper-slide {
-        transform: translateX(1.0416666667vw);
+        transform: translateX(30px);
       }
       .container {
         width: 100vw;
@@ -105,6 +105,7 @@
       }
       .swiper-slide .lazyload {
         width: 100%;
+        height: 100%;
       }
     </style>
   </head>
@@ -275,7 +276,7 @@
       // 外
       var outSwiper = new Swiper(".swiper-container-outside", {
         slidesPerView: "auto",
-        spaceBetween: 60,
+        spaceBetween: 40,
         centeredSlides: true,
         allowTouchMove: false,
         loop: true,
@@ -288,8 +289,6 @@
           prevEl: ".swiper-pre",
         },
       });
-      // insideSwiper.slideTo(5);
-      // outSwiper.slideTo(3);
     </script>
   </body>
 </html>
