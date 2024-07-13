@@ -1,0 +1,1 @@
+# swiper-phone-thumbs

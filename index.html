@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+      .swiper-container-inside {
+        width: 175px;
+        height: 380px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        overflow: hidden;
+      }
+      .swiper-container-outside {
+        width: 100vw;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        transition: all 0.6s;
+      }
+      .swiper-container-outside.active {
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+      .swiper-container-inside .swiper-slide {
+        width: 175px;
+      }
+      .swiper-container-outside .swiper-slide {
+        width: 120px;
+      }
+      .swiper-pre,
+      .swiper-nex {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.6s;
+      }
+      .swiper-pre img,
+      .swiper-nex img {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-pre.active,
+      .swiper-nex.active {
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+      .swiper-pre {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -145px;
+        bottom: 50px;
+      }
+      .swiper-nex {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 145px;
+        bottom: 50px;
+      }
+      .swiper-container-outside .swiper-slide:not(.swiper-slide-active) {
+        transform: translateX(-1.0416666667vw);
+      }
+      .swiper-container-outside .swiper-slide-active ~ .swiper-slide {
+        transform: translateX(1.0416666667vw);
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        border: 1px solid #eee;
+        overflow: hidden;
+      }
+      .phone-bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 184px;
+        height: 392px;
+        margin-left: 1px;
+        transform: translate(-50%, -50%);
+        background: url("https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/phone-k.webp")
+          no-repeat center center;
+        background-size: 100% 100%;
+      }
+      .swiper-slide .lazyload {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="phone-bg"></div>
+        <!-- 里壁纸 -->
+        <div class="swiper-container-inside swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="lazyload"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every1.jpg"
+                alt="个性美感 锁定愉悦 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every2.jpg"
+                alt="个性美感 锁定愉悦 3"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every3.jpg"
+                alt="个性美感 锁定愉悦 4"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every4.jpg"
+                alt="个性美感 锁定愉悦 5"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every5.png"
+                alt="个性美感 锁定愉悦 6"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every6.png"
+                alt="个性美感 锁定愉悦 7"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every7.jpg"
+                alt="个性美感 锁定愉悦 8"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 外壁纸 -->
+        <div class="swiper-container-outside swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="lazyload"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every1.jpg"
+                alt="个性美感 锁定愉悦 9"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every2.jpg"
+                alt="个性美感 锁定愉悦 10"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every3.jpg"
+                alt="个性美感 锁定愉悦 11"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every4.jpg"
+                alt="个性美感 锁定愉悦 12"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every5.png"
+                alt="个性美感 锁定愉悦 13"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every6.png"
+                alt="个性美感 锁定愉悦 14"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="lazyload blur-up"
+                src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/wallpaper-every7.jpg"
+                alt="个性美感 锁定愉悦 15"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-pre active"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+        >
+          <img
+            class="blur-up ls-is-cached lazyloaded"
+            data-src="/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/btn-pre.png"
+            alt="个性美感 锁定愉悦 16"
+            src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/btn-pre.png"
+          />
+        </div>
+        <div
+          class="swiper-nex active"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+        >
+          <img
+            class="blur-up ls-is-cached lazyloaded"
+            data-src="/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/btn-nex.png"
+            alt="个性美感 锁定愉悦 17"
+            src="https://www.honor.com/content/dam/honor/cn/magic-os-2024/assets/imgs/sec11/btn-nex.png"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 壁纸轮播
+      var initSwiper = false;
+      // 里
+      var insideSwiper = new Swiper(".swiper-container-inside", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-nex",
+          prevEl: ".swiper-pre",
+        },
+      });
+
+      // 外
+      var outSwiper = new Swiper(".swiper-container-outside", {
+        slidesPerView: "auto",
+        spaceBetween: 60,
+        centeredSlides: true,
+        allowTouchMove: false,
+        loop: true,
+        thumbs: {
+          swiper: insideSwiper,
+        },
+
+        navigation: {
+          nextEl: ".swiper-nex",
+          prevEl: ".swiper-pre",
+        },
+      });
+      // insideSwiper.slideTo(5);
+      // outSwiper.slideTo(3);
+    </script>
+  </body>
+</html>
