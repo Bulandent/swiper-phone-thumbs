@@ -2,7 +2,7 @@
 
 ![swiper-phone](https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202406/demo.png)
 
-使用 swiper 实现的图片图片横穿过手机的效果。该效果有以下特点：
+使用 swiper 实现的图片横穿过手机的效果。该效果有以下特点：
 
 - 最中间的图片会更大且永远居中；
 - 每张图片之间间距相等；
